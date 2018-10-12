@@ -1,0 +1,24 @@
+<div class="d-flex p-3 ml-300 justify-content-center align-content-center">
+    <div class="card mw-500 w-500 shadow" *ngIf="cardsShow === false">
+        <h3 class="card-header bg-primary p-4 text-white border-dark">
+            Congrats!
+        </h3>
+        <div class="card-body">
+            <h3 class="card-title">Welcome</h3>
+            <p class="card-text">You are logged in.</p>
+            <button class="btn btn-primary p-2 float-right" (click)="generate()">Generate</button>
+        </div>
+    </div>
+    <div class="card-deck" *ngIf="cardsShow === true">
+        <div class="card shadow mw-250 mb-2" *ngFor="let user of users">
+            <div class="card-header">
+                <img class="card-img-top" src="{{ user.photo }}">
+                <div class="card-title">{{ user.username}}</div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ user.fname }} {{ user.lname }}</h5>
+                <p class="card-text">{{ user.post }}</p>
+            </div>
+        </div>
+    </div>
+</div>

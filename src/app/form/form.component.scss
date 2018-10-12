@@ -1,0 +1,31 @@
+.root{
+    i{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.ml-300{
+    margin-left: 300px;
+}
+#signup:hover{
+    color: white;
+}
+.h-500{
+    height: 500px;
+}
+
+.font-big{
+    font-size: 18px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border: 1px solid green; /* green */
+}
+.ng-invalid:not(form)  {
+    border: 1px solid red; /* red */
+}
+
+.radius-20{
+    border-radius: 20px;
+}
