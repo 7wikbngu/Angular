@@ -1,14 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav class="navbar bg-primary p-2">
-  <button class="navbar-toggler mr-auto" (click)="collapsible = !collapsible"><i class="fas fa-bars w-25 text-white"></i></button>
-  <h4 class="text-white mr-auto">LOGO</h4>
-  <button class="profile rounded-circle bg-white border-0 btn btn-lg">B</button>
+<nav class="navbar bg-dark p-1" *ngIf="navbarClosed === false">
+  <div class="navbar-toggler nav-item" (click)="collapsible = !collapsible"><i class="fas fa-bars w-25 text-white"></i></div>
+  <h4 class="text-white navbar-brand nav-item mt-2 logo">LOGO</h4>
+  <div class="nav-item dropdown">
+    <button type="button" class="navbar-brand dropdown nav-item rounded-circle bg-white border-0 btn btn-lg dropdown-toggle" data-toggle="dropdown">B</button>
+    <div class="dropdown-menu">
+      <a href="#" class="dropdown-item">Profile</a>
+      <a href="#" class="dropdown-item">Sign out</a>
+    </div>
+  </div>
 </nav>
 <div class="row position-absolute">
   <ul class="col-3 list-group bg-light text-center p-0 shadow sidemenu" [ngbCollapse]="collapsible">
-    <li class="list-group-item bg-primary text-white border-0" routerLink="/form" (click)="collapsible = !collapsible">Form</li>
-    <li class="list-group-item bg-primary text-white" routerLink="/cardmenu" (click)="collapsible = !collapsible">Side Menu</li>
-    <li class="list-group-item bg-primary text-white" routerLink="/form" (click)="collapsible = !collapsible">Logout</li>
+    <li class="list-group-item bg-dark text-white border-0" routerLink="/form" (click)="collapsible = !collapsible">Form</li>
+    <li class="list-group-item bg-dark text-white" routerLink="/cardmenu" (click)="collapsible = !collapsible">Card Menu</li>
+    <li class="list-group-item bg-dark text-white" routerLink="/dashboard" (click)="collapsible = !collapsible">Dashboard</li>
+    <li class="list-group-item bg-dark text-white" routerLink="/form" (click)="collapsible = !collapsible">Logout</li>
   </ul>
 </div>
 <router-outlet class="position-relative"></router-outlet>

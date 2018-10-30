@@ -15,7 +15,7 @@ export class CardmenuComponent implements OnInit {
   users: [''];
   num: number;
   cardsShow: Boolean;
-  constructor(private usersService: NumbersCardsService) { 
+  constructor(private usersService: NumbersCardsService) {
     this.cardsShow = false;
   }
 

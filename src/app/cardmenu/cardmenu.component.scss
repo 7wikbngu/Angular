@@ -1,6 +1,12 @@
+
+div.h-100vh{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 .card{
-        min-height: 300px;
-    min-width: 500px;
+    min-height: 250px;
+    min-width: 300px;
     img{
         height: 100px;
         width:100px;

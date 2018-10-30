@@ -1,45 +1,66 @@
-<div class="d-flex h-100vh justify-content-center align-items-center bg-light">
+<div class="d-flex h-100vh justify-content-center align-items-center">
 	<!-- LOGIN -->
-	<div class="w-500 h-500 shadow p-1 m-1">
-		<span class="text-center shadow">
-			<h3 class="mt-3">LOGIN</h3>
-		</span>
-		<form class="p-2" #loginForm="ngForm">
-			<div class="form-group">
-				<i class="fas fa-envelope ml-2 shadow"></i>
-				<label class="p-1 font-big">Email</label>
-				<input required type="email" id="email" class="form-control radius-20 p-3  font-big" name="email" placeholder="Enter your e-mail here"
-				[(ngModel)]="email" required minlength="4">
-			</div>
-			<div class="form-group">
-				<i class="fas fa-key ml-2 shadow"></i>
-				<label class="p-1 font-big">Password</label>
-				<input required type="password" id="password" class="form-control radius-20 p-3  font-big" name="password"
-				placeholder="......" [(ngModel)]="password">
-			</div>
-			<button type="button" class="btn btn-primary w-100 mt-3 radius-20" routerLink="/cardmenu">Sign In</button>
-		</form>
-		<span class="float-right mr-3 mt-3" id="signup">Create Account!</span>
+	<div class="w-500 h-500 p-4 m-1 shadow">
+		<div id="login" *ngIf="!viewSignin">
+			<span class="text-center text-white">
+				<h4 class="mt-3">LOGIN</h4>
+			</span>
+			<form class="p-2 mt-4" #loggrayrm="ngForm">
+				<div class="form-group">
+					<label class="p-1 text-white">Username</label>
+					<div class="input-group">
+						<i class="input-group-prepend fas fa-user ml-2"></i>
+						<input required type="email" id="email" class="form-control p-3 font-big" name="email" placeholder="Enter your e-mail here"
+						[(ngModel)]="email" required minlength="4">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="p-1 text-white">Password</label>
+					<div class="input-group">
+						<i class="input-group-prepend fas fa-lock ml-2"></i>
+						<input required type="password" id="password" class="form-control p-3 font-big" name="password"
+						placeholder="......" [(ngModel)]="password">
+					</div>
+				</div>
+				<button type="button" class="btn btn-gray w-100 mt-3 radius-20" routerLink="/cardmenu">Sign In</button>
+			</form>
+			<span class="float-right gray-text mr-3 mt-3 text-white" id="signup" (click)="viewSignin = true">Create Account!</span>
+		</div>
+		<div id="signUp" *ngIf="viewSignin">
+			<span class="text-center">
+				<h4 class="mt-3 text-white">SIGN IN</h4>
+			</span>
+			<h5 class="ml-2 text-white">Create an account!</h5>
+			<form class="p-2" #loggrayrm="ngForm">
+				<div class="form-row">
+					<div class="col form-group">
+						<label class="p-1 text-white">First Name</label>
+						<input required type="text" id="fname" class="form-control p-3" name="firstname" placeholder="Your first name" [(ngModel)]="fname">
+					</div>
+					<div class="col form-group">
+						<label class="p-1 text-white">Last Name</label>
+						<input required type="text" id="lname" class="form-control p-3" name="lastname" placeholder="Your last name" [(ngModel)]="lname">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="p-1 text-white">Username</label>
+					<input required type="email" id="email" class="form-control p-3 font-big" name="password"
+					placeholder="Enter your username" [(ngModel)]="sEmail">
+				</div>
+				<div class="form-row">
+					<div class="form-group col">
+						<label class="p-1 text-white">Password</label>
+						<input required type="password" id="password" class="form-control p-3 font-big" name="password"
+						placeholder="......" [(ngModel)]="sPassword">
+					</div>
+					<div class="form-group col">
+						<label class="p-1 text-white">Confirm Password</label>
+						<input required type="password" id="password" class="form-control p-3 font-big" name="password"
+						placeholder="......" [(ngModel)]="scPassword">
+					</div>
+				</div>
+				<button type="button" class="btn btn-gray w-100 mt-3 radius-20" routerLink="/cardmenu">Sign In</button>
+			</form>
+		</div>
 	</div>
 </div>
-	<!-- SIGN UP -->
-	<!-- <div class="w-500 h-500 shadow p-1 m-1">
-		<span class="text-center shadow">
-			<h3 class="mt-3">LOGIN</h3>
-		</span>
-		<form class="p-2" #loginForm="ngForm">
-			<div class="form-group">
-				<i class="fas fa-envelope ml-2 shadow"></i>
-				<label class="p-1 font-big">Email</label>
-				<input required type="email" id="email" class="form-control radius-20 p-4  font-big" name="email" placeholder="Enter your e-mail here"
-				[(ngModel)]="email">
-			</div>
-			<div class="form-group">
-				<i class="fas fa-key ml-2 shadow"></i>
-				<label class="p-1 font-big">Password</label>
-				<input required type="password" id="password" class="form-control radius-20 p-4  font-big" name="password"
-				placeholder="......" [(ngModel)]="password">
-			</div>
-			<button type="button" class="btn btn-primary w-100 mt-3 radius-20" routerLink="/cardmenu">Sign In</button>
-		</form>
-	</div> -->

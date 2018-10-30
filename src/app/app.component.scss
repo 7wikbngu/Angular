@@ -1,24 +1,41 @@
-router-outlet{
-    min-height: 100vh;
-}
 .mw-50{
     max-width: 50%;
 }
 
-.profile{
-
+nav{
+    max-height: 55px;
+    .dropdown{
+        .dropdown-menu{
+            position: absolute;
+            z-index: 1;
+        }
+    }
 }
 
+.navbar-toggler{
+    font-size: 28px;
+}
+
+.logo{
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.logo:hover{
+    color: #444 !important;
+}
 .row{
-    z-index: 10;
-    
     .sidemenu{
         min-width: 300px;
         max-width: 350px;
-        height: calc(100vh - 62px);
+        height: calc(100vh - 55px);
         
         li{
             cursor: pointer;
+        }
+        li:hover{
+            background-color: #8e44ad !important;
+            color: #bbb !important;
         }
     }
 }
