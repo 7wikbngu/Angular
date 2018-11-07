@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
       if (location.path() === '/form') {
         this.route = location.path();
         this.navbarClosed = true;
-        console.log(this.route);
+        // console.log(this.route);
       } else {
         this.navbarClosed = false;
         console.log(location.path());

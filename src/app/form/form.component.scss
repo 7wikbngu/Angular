@@ -2,14 +2,18 @@ div.d-flex{
     background-image: url(/src/assets/img/form-bg5.jpeg);
     background-size: cover;
     z-index: -1;
-}
 
-#login{
-    z-index: 10;
+    .box-container{
+        background: rgba(0,0,0,0.5);
+        #login{
+            z-index: 10;
+        }
+    }
 }
 
 i{
     position: absolute;
+    color: white;
     height: 20px;
     width: 20px;
     top: 10px;

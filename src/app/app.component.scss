@@ -1,29 +1,36 @@
-.mw-50{
-    max-width: 50%;
-}
+$purple: #8e44ad;
 
 nav{
     max-height: 55px;
-    .dropdown{
-        .dropdown-menu{
-            position: absolute;
-            z-index: 1;
+
+    .navbar-toggler{
+        font-size: 28px;
+    }
+    .logo{
+        letter-spacing: 5px;
+        line-height: 1;
+    }
+    .dropdown::after{
+        content: "";
+        display: none;
+    }
+    
+    .dropdown:focus{
+        box-shadow: none;
+    }
+    .dropdown-menu{
+        left: -115px !important;
+        a:hover{
+            color: #fff;
+            background: $purple;
         }
     }
-}
-
-.navbar-toggler{
-    font-size: 28px;
-}
-
-.logo{
-    letter-spacing: 5px;
-    line-height: 1;
 }
 
 .logo:hover{
     color: #444 !important;
 }
+
 .row{
     .sidemenu{
         min-width: 300px;
@@ -34,7 +41,7 @@ nav{
             cursor: pointer;
         }
         li:hover{
-            background-color: #8e44ad !important;
+            background-color: $purple !important;
             color: #bbb !important;
         }
     }

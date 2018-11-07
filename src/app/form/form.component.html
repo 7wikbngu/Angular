@@ -1,6 +1,6 @@
 <div class="d-flex h-100vh justify-content-center align-items-center">
 	<!-- LOGIN -->
-	<div class="w-500 h-500 p-4 m-1 shadow">
+	<div class="w-500 h-500 p-4 m-1 shadow box-container">
 		<div id="login" *ngIf="!viewSignin">
 			<span class="text-center text-white">
 				<h4 class="mt-3">LOGIN</h4>
@@ -22,7 +22,7 @@
 						placeholder="......" [(ngModel)]="password">
 					</div>
 				</div>
-				<button type="button" class="btn btn-gray w-100 mt-3 radius-20" routerLink="/cardmenu">Sign In</button>
+				<button type="button" class="btn btn-gray w-100 mt-3 radius-20" routerLink="/dashboard">Sign In</button>
 			</form>
 			<span class="float-right gray-text mr-3 mt-3 text-white" id="signup" (click)="viewSignin = true">Create Account!</span>
 		</div>

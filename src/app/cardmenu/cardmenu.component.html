@@ -11,7 +11,7 @@
     </div>
     <div *ngIf="cardsShow === true">
         <div class="card mw-500 shadow mb-2" *ngFor="let user of users">
-            <div class="d-flex card-header bg-lightgray text-white">
+            <div class="d-flex card-header bg-dark text-white">
                 <img class="card-img-top text-white" src="{{ user.photo }}">
                 <div class="card-title font-weight-bold align-self-center p-3">{{ user.username}}</div>
             </div>
